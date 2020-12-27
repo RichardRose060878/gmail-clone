@@ -1,8 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { useGridReducer } from '@material-ui/data-grid'
+import { configureStore } from '@reduxjs/toolkit'
+import mailReducer from '../features/mailSlice'
+import userReducer from '../features/userSlice'
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    mail: mailReducer,
+    user: userReducer,
   },
-});
+})
